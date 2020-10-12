@@ -16,7 +16,6 @@ package com.blue.leetcode.subject;
  * 所以返回 [0, 1]
  */
 public class Subject001 {
-
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             int a;
@@ -33,5 +32,4 @@ public class Subject001 {
             return new int[]{};
         }
     }
-
 }
