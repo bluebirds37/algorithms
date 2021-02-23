@@ -6,12 +6,17 @@ import com.blue.leetcode.subject.Subject307;
 
 public class MainTest {
     public static void main(String[] args) {
+        System.out.println(winnerSquareGame(8));
+        System.out.println(winnerSquareGame(2));
         System.out.println(winnerSquareGame(3));
+        System.out.println(winnerSquareGame(7));
+        System.out.println(winnerSquareGame(17));
 
     }
 
     public static boolean winnerSquareGame(int n) {
-        int count = 0;
+        int countA = 0;
+        int countB = 0;
         double sqrt = Math.sqrt(n);
         //判断是否含有小数
         if (sqrt - (int) sqrt == 0) {
@@ -19,21 +24,27 @@ public class MainTest {
             return true;
         }
         int m = n;
-        while (m > 1) {
+        while (m >= 1) {
             sqrt = Math.sqrt(m);
             //判断是否含有小数
             if (sqrt - (int) sqrt == 0) {
+                if (countA <= countB) {
+                    countA++;
+                } else {
+                    countB++;
+                }
                 //平方数
                 n = n - m;
-                count++;
                 m = n;
+                continue;
             }
             m--;
         }
-        if (count != 1 && count % 2 != 0) {
+        if (countA > countB) {
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
 

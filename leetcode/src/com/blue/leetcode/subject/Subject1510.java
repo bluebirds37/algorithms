@@ -67,7 +67,7 @@ public class Subject1510 {
                 //判断是否含有小数
                 if (sqrt - (int) sqrt == 0) {
                     //平方数
-                    n = n - (int) sqrt;
+                    n = n - m;
                     count++;
                 }
                 m--;
