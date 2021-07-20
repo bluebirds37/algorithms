@@ -23,16 +23,22 @@ package com.blue.leetcode.interview;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Interview0109 {
+
     public Interview0109() {
+
     }
 
     class Solution {
+
         public boolean isFlipedString(String s1, String s2) {
+
             if (s1.length() != s2.length()) {
                 return false;
             }
             return (s2 + s2).contains(s1);
+
         }
+
     }
 
 }

@@ -5,6 +5,7 @@ import com.blue.leetcode.subject.Subject1510;
 import com.blue.leetcode.subject.Subject307;
 
 public class MainTest {
+
     public static void main(String[] args) {
         System.out.println(winnerSquareGame(8));
         System.out.println(winnerSquareGame(2));
@@ -46,6 +47,5 @@ public class MainTest {
             return false;
         }
     }
-
 
 }
